@@ -1,0 +1,51 @@
+Wireshark Network Traffic Analysis — Commands
+
+1. Identify network interfaces
+
+ip addr
+
+2. Test connectivity to the Metasploitable lab target
+
+ping -c 4 192.168.56.105
+
+3. Connect to the FTP service
+
+ftp 192.168.56.105
+
+4. Generate DNS traffic
+
+nslookup google.com
+
+5. Generate HTTP traffic
+
+curl http://192.168.56.105
+
+6. Filter traffic by protocol
+
+ICMP:
+icmp
+
+DNS:
+dns
+
+HTTP:
+http
+
+TCP:
+tcp
+
+7. Filter traffic by target IP
+
+ip.addr == 192.168.56.105
+
+8. Filter traffic by TCP port
+
+tcp.port == 21
+
+9. Follow a TCP conversation
+
+Right-click a TCP packet → Follow → TCP Stream
+
+10. Save a packet capture
+
+Wireshark → File → Save As → wireshark-lab-capture.pcapng
